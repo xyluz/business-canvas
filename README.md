@@ -5,7 +5,7 @@ This project will use NodeJs, ReactJS and Figma.
 
 Required branches:
 
-main - contains working code
-frontend - contains frontend code
+main - contains working code  
+frontend - contains frontend code  
 backend - contains backend code
 
