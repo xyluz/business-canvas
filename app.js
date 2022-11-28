@@ -2,8 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const router = require("./routers/homeRouter")
+const connection = require("./database/db")
 
 const app = express();
+connection()
 
 // test route
 
