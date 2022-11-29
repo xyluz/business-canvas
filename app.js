@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const router = require("./routers/homeRouter")
+
+const router = require("./routers/homeRouter");
+const SEND_EMAIL = require("./utils/sendEmail");
 
 const app = express();
 
