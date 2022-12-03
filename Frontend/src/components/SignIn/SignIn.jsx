@@ -1,8 +1,8 @@
 import React from 'react';
 import images from '../../constants/images';
-import styles from './DummyComponent.module.css';
+import styles from './SignIn.module.css';
 
-const DummyComponent = () => {
+const SignIn = () => {
   return (
     <div className={styles.bodyContainer}>
       <div  className={styles.left}>
@@ -43,4 +43,4 @@ const DummyComponent = () => {
   )
 }
 
-export default DummyComponent
+export default SignIn

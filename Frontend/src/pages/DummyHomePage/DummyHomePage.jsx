@@ -1,10 +1,10 @@
 import React from 'react';
-import DummyComponent from '../../components/DummyComponent/DummyComponent';
+import SignIn from '../../components/SignIn/SignIn';
 
 const DummyHomePage = () => {
   return (
     <div>
-      <DummyComponent />
+      <SignIn />
     </div>
   )
 }
