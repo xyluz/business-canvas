@@ -1,11 +1,27 @@
-.headingContainer{
+
+.bodyContainer{
     width: 100%;
-    border: 1px solid blue;
+    height: 100vh;
+    display: flex;
+}
+
+/* left section */
+.left {
+    width: 50%;
+    color: #fff;
+    display: flex;
     text-align: center;
+    align-items: center;
+    background-color: #0D2C54;
 }
-.heading{
-    color: red;
+.left h1 {
+    font-size: 5.3rem;
+    padding: 2% 0;
+    line-height: 1.5rem;
 }
-.text{
-    color: blue;
+.left p {
+    font-size: 0.8rem;
+    padding: 4% 25%;
+    line-height: 1.5rem;
+    font-weight: 500;
 }
