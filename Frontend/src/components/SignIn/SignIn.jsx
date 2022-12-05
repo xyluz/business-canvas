@@ -46,9 +46,7 @@ const SignIn = () => {
               <button>Create an account</button>
             </form>
           </div>
-          <footer>
-            <p>Don’t have an account? <span>Sign up</span></p>
-          </footer>
+          <footer> Don’t have an account? <span>Sign up</span> </footer>
         </div>
       </div>
     </div>

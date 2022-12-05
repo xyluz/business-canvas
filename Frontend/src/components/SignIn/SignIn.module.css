@@ -14,15 +14,15 @@
     background-color: #0D2C54;
 }
 .left h1 {
-    font-size: 5.3rem;
     padding: 2% 0;
+    font-size: 5.3rem;
     line-height: 1.5rem;
 }
 .left p {
-    font-size: 0.8rem;
     padding: 4% 25%;
-    line-height: 1.5rem;
     font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
 }
 
 
@@ -33,9 +33,9 @@
 }
 .rightContainer {
     width: 50%;
-    height: 57vh;
+    height: 68vh;
     padding: 10%;
-    margin: 10% 15%;
+    margin: 5% 15% 10% 15%;
     border: 2px solid #0D2C54;
     border-radius: 3px;
 }
@@ -55,11 +55,12 @@
     margin: 2% 0;
     padding: 2.5% 0;
     font-weight: 500;
+    font-family: 'Montserrat';
+    cursor: pointer;
     border: 0.7px solid #0D2C54;
     border-radius: 3px;
     background: transparent;
     position: relative;
-    font-family: 'Montserrat';
 }
 .formText button::before {
     content: url(../../assets/Google.svg);
@@ -67,6 +68,13 @@
     left: 24%;
     top: 17%;
     zoom: 90%;
+}
+.formText p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
 }
 
 /* form section */
@@ -86,13 +94,15 @@
     border-radius: 3px;
 }
 
+/* checkboxes */
 .form .checkboxes {
     margin-top: 3%;
+    margin-bottom: 4%;
 }
 .checkboxes label {
-    position: relative;
     display: flex;
     align-items: center;
+    position: relative;
     margin-left: 8%;
 } 
 /* custom checkbox */
@@ -100,9 +110,9 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     height: 1.2em;
     width: 1.2em;
+    left: -8%;
     cursor: pointer;
     position: absolute;
-    left: -9%;
     transition: .10s ease;
     background-color: #D9D9D9;
 }
@@ -124,4 +134,39 @@ input[type="checkbox"]:checked:before {
     content: '✔';
     zoom: 80%;
     background-color: #0D2C54;
+}
+
+
+.form button {
+    width: 96%;
+    cursor: pointer;
+    padding: 0.4rem 0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #0D2C54;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+footer {
+    font-size: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    margin: 5% 0;
+}
+footer span {
+    color: #0D2C54;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
 }
