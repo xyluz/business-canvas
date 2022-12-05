@@ -20,18 +20,28 @@ const SignIn = () => {
             <button type='button' className='signIn-button'>Sign in with google</button>
             <p>-------- Or --------</p>
           </div>
-          <div className='form'>
+          <div className={styles.form}>
             <form action="">
               <label htmlFor="full-name"> Enter Full Name or Email <br />
                 <input type="text" name="full-name" id="text" />
               </label> <br />
+              <br />
               <label htmlFor="full-name"> Enter Password <br />
                 <input type="text" name="full-name" id="text" />
               </label>
-              <div  className='checkboxes'>            
-                <input type="checkbox" name="" id="" />Password must have at least 8 characters <br />
-                <input type="checkbox" name="" id="" />Password must have at least 1 digit <br />
-                <input type="checkbox" name="" id="" />Password must have Uppercase character  <br />
+              <br />
+              <div  className={styles.checkboxes}>            
+                <label for="passwordCharacters"> Password must have at least 8 characters 
+                  <input type="checkbox" name="" id="passwordCharacters" />
+                </label>
+                <br />
+                <label for="passwordDigits"> Password must have at least 1 digit 
+                  <input type="checkbox" name="" id="passwordDigits" />
+                </label>
+                <br />
+                <label for="passwordCasing"> Password must have Uppercase character 
+                  <input type="checkbox" name="" id="passwordCasing" />
+                </label>
               </div>
               <button>Create an account</button>
             </form>
