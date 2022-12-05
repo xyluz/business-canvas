@@ -3,11 +3,12 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 // const nodemailer = require("nodemailer");
 
-const DATABASE = require("./models/homeModels");
-const router = require("./routers/homeRouter");
+const router = require("./routers/homeRouter")
+const connection = require("./database/db")
 const SEND_EMAIL = require('./utils/sendEmail');
 
 const app = express();
+connection()
 
 // test route
 app.use("/", router);
