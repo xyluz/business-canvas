@@ -1,0 +1,206 @@
+:root {
+	--brand: #0d2c54;
+	--textColor: #000000;
+	--textWhite: #ffffff;
+	--fontFamily: "Montserrat", sans-serif;
+	--fontNormal: 400;
+	--fontMedium: 500;
+	--fontSemiBold: 600;
+	--fontBold: 700;
+}
+
+a {
+	text-decoration: none;
+	color: var(--textColor);
+}
+
+a:active {
+	color: var(--textColor);
+}
+
+input,
+::placeholder {
+	font-family: var(--fontFamily);
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex_col {
+	display: flex;
+	flex-direction: column;
+}
+
+.sign_up_wrapper {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signUp_container {
+	font-family: var(--fontFamily);
+	width: 100%;
+	max-width: 1510px;
+	display: flex;
+}
+
+.r_side {
+	background-color: var(--brand);
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+}
+
+.r_side_textContent {
+	color: var(--textWhite);
+	width: 70%;
+	text-align: center;
+	gap: 1.5rem;
+}
+
+.r_side_title {
+	font-size: 4.5rem;
+}
+
+.l_side {
+	width: 50%;
+	padding: 3rem 0;
+}
+
+.l_side_container {
+	width: 80%;
+	padding:  4rem;
+	margin: 0 auto;
+	border: 2px solid var(--brand);
+	border-radius: 4px;
+}
+
+.l_side_heading {
+	font-size: 2rem;
+	font-weight: var(--fontSemiBold);
+}
+
+.l_side_header a {
+	justify-content: center;
+	gap: 1rem;
+	font-weight: var(--fontMedium);
+	font-size: 0.875rem;
+	border: 1px solid var(--brand);
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	margin: 2rem 0;
+}
+
+.l_side_header img {
+	width: 24px;
+}
+
+.middleOption {
+	width: 50%;
+	margin: 0 auto 2rem auto;
+}
+
+.middleOption p {
+	font-weight: var(--fontMedium);
+}
+
+.form {
+	gap: 1.2rem;
+}
+
+.formGroup {
+	align-items: flex-start;
+	gap: 0.3rem;
+}
+
+.formGroup label {
+	font-size: 0.875rem;
+	font-weight: var(--fontMedium);
+}
+
+.formGroup input {
+	width: 100%;
+	padding: 0.8rem 1rem;
+	border: 1px solid var(--brand);
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+.formGroup input:focus {
+	outline: none;
+}
+
+.formGroup input:valid {
+	border: 1px solid var(--brand);
+}
+
+.formGroup input:invalid {
+	border: 1px solid red;
+}
+
+.formGroup_errormsg {
+	color: red;
+	font-size: 0.875rem;
+	font-weight: var(--fontMedium);
+	visibility: hidden;
+}
+
+.formGroup input:invalid + .formGroup_errormsg {
+	visibility: visible;
+}
+
+.password {
+	position: relative;
+	width: 100%;
+}
+
+.password input {
+	width: 100%;
+	padding: 0.8rem 1rem;
+	border: 1px solid var(--brand);
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+.password img {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	width: 22px;
+	cursor: pointer;
+}
+
+.formSubmit {
+	margin: 2rem 0;
+}
+
+.formSubmit button {
+	width: 100%;
+	padding: 0.8rem 1rem;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	font-family: var(--fontFamily);
+	background-color: var(--brand);
+	color: var(--textWhite);
+	cursor: pointer;
+}
+
+.signIn {
+	font-weight: var(--fontBold);
+}
+
+.signInRedir a {
+	color: var(--brand);
+    transition: border-bottom 0.2s;
+}
+
+.signInRedir a:hover {
+	border-bottom: 3px solid var(--brand);
+}
