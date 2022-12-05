@@ -170,3 +170,10 @@ footer span {
     font-size: 16px;
     line-height: 19px;
 }
+
+
+/* error message */
+
+.error {
+    font-size: 0.7rem;
+}
