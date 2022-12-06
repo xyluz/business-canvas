@@ -29,3 +29,31 @@ exports.registerUser = async (req, res) => {
 			.json({ message: "An error occurred, please contact Admin" });
 	}
 };
+
+exports.loginUser = async (req, res) => {
+	try {
+		const { email, password } = req.body;
+		const findUser = await User.findOne({ email: email });
+		if (!findUser) {
+			return res
+				.status(404)
+				.json({ message: "Invalid Email or Password" });
+		}
+
+		const passMatch = await bcrypt.compare(password, findUser.password);
+		if (!passMatch) {
+			return res
+				.status(404)
+				.json({ message: "Invalid Email or Password" });
+		}
+
+		return res
+			.status(200)
+			.json({ message: "User Successfully Logged In", user: findUser });
+	} catch (err) {
+		console.log(err);
+		return res
+			.status(500)
+			.json({ message: "An error occurred, please contact Admin" });
+	}
+};
