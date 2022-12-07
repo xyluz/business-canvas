@@ -1,0 +1,408 @@
+.bodyContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/* left section */
+.left {
+    width: 50%;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #0D2C54;
+}
+.left h1 {
+    padding: 2% 0;
+    font-size: 5.3rem;
+    line-height: 1.5rem;
+}
+.left p {
+    padding: 4% 25%;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+
+/* right section */
+
+.right {
+    width: 50%;
+}
+.rightContainer {
+    width: 50%;
+    height: 68vh;
+    padding: 10%;
+    margin: 5% 15% 10% 15%;
+    border: 2px solid #0D2C54;
+    border-radius: 3px;
+}
+
+/* the text before the form */
+.formText {
+    text-align: center;
+    line-height: 40px;
+}
+.formText h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+/* .formText button {
+    width: 93%;
+    margin: 2% 0;
+    padding: 2.5% 0;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    border: 0.7px solid #0D2C54;
+    border-radius: 3px;
+    background: transparent;
+    position: relative;
+}
+.formText button::before {
+    content: url(../../assets/Google.svg);
+    position: absolute;
+    left: 24%;
+    top: 17%;
+    zoom: 90%;
+} */
+/* .formText p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+} */
+
+/* form section */
+.form {
+    margin-top: 10%;
+    margin-left: 3%;
+}
+.form label {
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 30px;
+}
+.form .input[type=text],
+.form .input[type=password]
+ {
+    width: 90%;
+    margin: 1% 0;
+    padding: 0.5rem;
+    border: 2px solid;
+    border-radius: 3px;
+}
+
+/* targeting the div with the visibility png */
+.form div:nth-child(3) {
+    position: relative;
+}
+/* the visibility png */
+.show {
+    width: 20px;
+    position: absolute;
+    bottom: 15%;
+    left: 84%;
+    cursor: pointer;
+}
+
+
+/* remember me / forgot password */
+.check {
+    width: 95%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.check div {
+    width: 34%;
+    display: flex;
+    justify-content: space-between;
+}
+.check p {
+    font-size: 0.8rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    align-items: center;
+    margin-top: 0.4rem;
+    cursor: pointer;
+}
+
+
+.form button {
+    width: 96%;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    margin-top: 7%;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #0D2C54;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+.form button:hover {
+    color: #0D2C54;
+    font-weight: 500;
+    background-color: #fff;
+    border: 2px solid #0D2C54;
+    transition: 0.4s ease;
+}
+
+footer {
+    font-size: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    margin: 5% 0;
+}
+footer a {
+    text-decoration: none;
+    color: #0D2C54;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
+/* error message */ 
+.error {
+    font-size: 0.7rem;
+    color: red;
+} 
+
+
+/* media query */
+
+/* iphone 6/7/8 plus */
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 736px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+    }
+    .form label,
+    .check p
+     {
+        font-size: 0.6rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 100%;
+    }
+    .check div {
+        width: 47%;
+    }
+    .form button {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+     {
+        font-size: 0.7rem;
+    }
+}
+
+/* iphone x */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.5rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 100%;
+    }
+    .check div {
+        width: 46%;
+    }
+    .form button {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}
+
+/* iphone 6/7/8 */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 667px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.5rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 100%;
+    }
+    .check div {
+        width: 46%;
+    }
+    .form button {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}
+
+/* ipad */
+@media only screen 
+    and (device-width: 768px) 
+    and (device-height: 1024px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+        height: 40vh;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.7rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 95%;
+    }
+    .check div {
+        width: 30%;
+    }
+    .form button {
+        width: 95%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}
+
+/* ipad pro */
+@media only screen 
+    and (device-width: 1024px) 
+    and (device-height: 1366px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 5% 15% 10% 15%;
+        padding: 5% 10%;
+        height: 35vh;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.7rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 94%;
+    }
+    .check div {
+        width: 23%;
+    }
+    .form button {
+        width: 94%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}
