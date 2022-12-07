@@ -70,8 +70,8 @@ const SignIn = () => {
                       className={styles.input} 
                     />
                     <img src={images.show} alt="a picture of an images" className={styles.show} onClick={() => setShowPassword(prev => !prev)} />
-                  <ErrorMessage name='password' render={msg => <div className={styles.error}>{msg}</div>} />
                 </div>
+                <ErrorMessage name='password' render={msg => <div className={styles.error}>{msg}</div>} />
 
                 <div  className={styles.check}>
                   <div>               
@@ -80,6 +80,7 @@ const SignIn = () => {
                   </div>
                   <p>Forgot Password?</p>
                 </div>
+                
                 <button type='submit'>Create an account</button>
               </Form>
             </Formik>
