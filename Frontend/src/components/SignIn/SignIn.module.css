@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: row;
 }
 
 /* left section */
@@ -50,7 +51,7 @@
     font-weight: 600;
     margin-bottom: 5%;
 }
-.formText button {
+/* .formText button {
     width: 93%;
     margin: 2% 0;
     padding: 2.5% 0;
@@ -68,17 +69,18 @@
     left: 24%;
     top: 17%;
     zoom: 90%;
-}
-.formText p {
+} */
+/* .formText p {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     color: #000000;
-}
+} */
 
 /* form section */
 .form {
+    margin-top: 10%;
     margin-left: 3%;
 }
 .form label {
@@ -137,7 +139,7 @@
 .form button {
     width: 96%;
     cursor: pointer;
-    padding: 0.4rem 0;
+    padding: 0.5rem 0;
     margin-top: 7%;
     border: none;
     border-radius: 3px;
@@ -148,6 +150,13 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
+}
+.form button:hover {
+    color: #0D2C54;
+    font-weight: 500;
+    background-color: #fff;
+    border: 2px solid #0D2C54;
+    transition: 0.4s ease;
 }
 
 footer {
@@ -160,7 +169,8 @@ footer {
     text-align: center;
     margin: 5% 0;
 }
-footer span {
+footer a {
+    text-decoration: none;
     color: #0D2C54;
     font-family: 'Inter';
     font-style: normal;
@@ -175,3 +185,224 @@ footer span {
     font-size: 0.7rem;
     color: red;
 } 
+
+
+/* media query */
+
+/* iphone 6/7/8 plus */
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 736px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+    }
+    .form label,
+    .check p
+     {
+        font-size: 0.6rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 100%;
+    }
+    .check div {
+        width: 47%;
+    }
+    .form button {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+     {
+        font-size: 0.7rem;
+    }
+}
+
+/* iphone x */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.5rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 100%;
+    }
+    .check div {
+        width: 46%;
+    }
+    .form button {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}
+
+/* iphone 6/7/8 */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 667px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.5rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 100%;
+    }
+    .check div {
+        width: 46%;
+    }
+    .form button {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}
+
+/* ipad */
+@media only screen 
+    and (device-width: 768px) 
+    and (device-height: 1024px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 10% 15% 10% 15%;
+        height: 40vh;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.7rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 95%;
+    }
+    .check div {
+        width: 30%;
+    }
+    .form button {
+        width: 95%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}
+
+/* ipad pro */
+@media only screen 
+    and (device-width: 1024px) 
+    and (device-height: 1366px) 
+    and (-webkit-device-pixel-ratio: 2) {
+
+    .bodyContainer {
+        flex-direction: column;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100%;
+        height: 100vh;
+    }
+    .rightContainer {
+        background-color: #fff;
+        margin: 5% 15% 10% 15%;
+        padding: 5% 10%;
+        height: 35vh;
+    }
+    .form label,
+    .check p
+        {
+        font-size: 0.7rem;
+    }
+    /* remember me / forgot password */
+    .check {
+        width: 94%;
+    }
+    .check div {
+        width: 23%;
+    }
+    .form button {
+        width: 94%;
+        font-size: 0.6rem;
+    }
+    footer,
+    footer a
+        {
+        font-size: 0.7rem;
+    }
+}

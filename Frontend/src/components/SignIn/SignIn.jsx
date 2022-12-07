@@ -29,7 +29,7 @@ const SignIn = () => {
         <div className="text-container">
           <h1>TEMIBMC</h1>
           <p>
-            Your business tool used to visualize all the building blocks when you want to start a business, including customers, route to market, value proposition and finance.
+          Temibmc is used to visualise all the building blocks of your business when starting a business, including customers, route to market, value proposition and finance.
           </p>
         </div>
       </div>
@@ -37,8 +37,8 @@ const SignIn = () => {
         <div className={styles.rightContainer}>
           <div  className={styles.formText}>
             <h2>Sign In</h2>
-            <button type='button' className='signIn-button'>Sign in with google</button>
-            <p>-------- Or --------</p>
+            {/* <button type='button' className='signIn-button'>Sign in with google</button> */}
+            {/* <p>-------- Or --------</p> */}
           </div>
           <div className={styles.form}>
             <Formik
@@ -80,12 +80,12 @@ const SignIn = () => {
                   </div>
                   <p>Forgot Password?</p>
                 </div>
-                
+
                 <button type='submit'>Create an account</button>
               </Form>
             </Formik>
           </div>
-          <footer> Don’t have an account? <span>Sign up</span> </footer>
+          <footer> Don’t have an account? <a href="#">Sign Up</a> </footer>
         </div>
       </div>
     </div>
