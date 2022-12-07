@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './SignIn.module.css';
+import images from '../../constants/images'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -9,18 +10,19 @@ const initialValues = {
   password: ''
 }
 
-const onSubmit = values => console.log('Form data', values)
+const onSubmit = values => console.log('Forms data', values)
 
 const validationSchema = Yup.object({
-  name: Yup.string().required('Please Input Full Name or Email'),
+  name: Yup.string().required('Please Input Full Name or Email.'),
   password: Yup.string()
   .required('No password provided.') 
   .min(8, 'Password is too short - should be 8 chars minimum.')
-  // .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.')
 })
 
 const SignIn = () => {
-  // console.log('Visited fields', formik.touched)
+
+  const [showPassword, setShowPassword] = useState(false);
+  
   return (
     <div className={styles.bodyContainer}>
       <div  className={styles.left}>
@@ -62,11 +64,12 @@ const SignIn = () => {
                 <div>
                   <label htmlFor="password"> Enter Password </label>
                     <Field 
-                      type="password" 
+                      type={ showPassword ? 'text' : 'password'}
                       id="password" 
                       name='password'
                       className={styles.input} 
                     />
+                    <img src={images.show} alt="a picture of an images" className={styles.show} onClick={() => setShowPassword(prev => !prev)} />
                   <ErrorMessage name='password' render={msg => <div className={styles.error}>{msg}</div>} />
                 </div>
 
