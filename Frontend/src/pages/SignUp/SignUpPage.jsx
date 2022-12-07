@@ -111,7 +111,7 @@ const SignUpPage = () => {
 									pattern={values.password}
 									required
 								/>
-								<span className={SignUpStyle.formGroup_errormsg}>{ errorMsg[3].confirmPwd}</span>
+								<span className={SignUpStyle.formGroup_errormsg}>{errorMsg[3].confirmPwd}</span>
 							</div>
 							<div className={`${SignUpStyle.flex_col} ${SignUpStyle.formSubmit}`}>
 								<button type="submit">Create an account</button>
