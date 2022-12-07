@@ -148,6 +148,7 @@ input,
 	font-size: 0.875rem;
 	font-weight: var(--fontMedium);
 	visibility: hidden;
+	text-align: left;
 }
 
 .formGroup input:invalid + .formGroup_errormsg {
