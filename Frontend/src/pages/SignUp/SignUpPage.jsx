@@ -20,11 +20,11 @@ const SignUpPage = () => {
 		confirmPwd: "",
 	});
 
+	const [focused, setFocused] = React.useState(false);
+
 	const onChange = (e) => {
 		setValues({ ...values, [e.target.name]: e.target.value });
 	};
-
-	console.log(values);
 
 	const errorMsg = [
 		{
@@ -38,9 +38,12 @@ const SignUpPage = () => {
 		},
 		{ confirmPwd: "Passwords don't match" },
 	];
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
+	};
+
+	const handleFocus = (e) => {
+		setFocused(true);
 	};
 
 	return (
@@ -75,15 +78,25 @@ const SignUpPage = () => {
 									type="text"
 									name="fullName"
 									id="fullName"
+									required
 									onChange={onChange}
 									pattern="^[A-Za-z0-9]{3,16}$"
-									required
+									onBlur={handleFocus}
+									focused={focused.toString()}
 								/>
 								<span className={SignUpStyle.formGroup_errormsg}>{errorMsg[0].fullName}</span>
 							</div>
 							<div className={`${SignUpStyle.flex_col} ${SignUpStyle.formGroup}`}>
 								<label htmlFor="email">Enter email address</label>
-								<input type="email" name="email" id="email" onChange={onChange} required />
+								<input
+									type="email"
+									name="email"
+									id="email"
+									onChange={onChange}
+									required
+									onBlur={handleFocus}
+									focused={focused.toString()}
+								/>
 								<span className={SignUpStyle.formGroup_errormsg}>{errorMsg[1].email}</span>
 							</div>
 							<div className={`${SignUpStyle.flex_col} ${SignUpStyle.formGroup}`}>
@@ -94,12 +107,13 @@ const SignUpPage = () => {
 										name="password"
 										id="password"
 										onChange={onChange}
-										pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$"
 										required
+										onBlur={handleFocus}
+										focused={focused.toString()}
 									/>
 									<img onClick={togglePwd} src={showPassword ? eye : closedEye} alt="password reveal" />
 								</div>
-								<span className={SignUpStyle.formGroup_errormsg}>{errorMsg[2].password}</span>
+								<p className={SignUpStyle.formGroup_errormsg}>{errorMsg[2].password}</p>
 							</div>
 							<div className={`${SignUpStyle.flex_col} ${SignUpStyle.formGroup}`}>
 								<label htmlFor="confirmPwd">Confirm your password</label>
@@ -110,6 +124,9 @@ const SignUpPage = () => {
 									onChange={onChange}
 									pattern={values.password}
 									required
+									onBlur={handleFocus}
+									onFocus={() => setFocused(true)}
+									focused={focused.toString()}
 								/>
 								<span className={SignUpStyle.formGroup_errormsg}>{errorMsg[3].confirmPwd}</span>
 							</div>

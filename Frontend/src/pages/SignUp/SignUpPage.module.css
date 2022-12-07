@@ -37,15 +37,17 @@ input,
 .sign_up_wrapper {
 	width: 100%;
 	height: 100vh;
+	max-width: 1450px;
+	margin: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
 .signUp_container {
 	font-family: var(--fontFamily);
 	width: 100%;
-	max-width: 1510px;
 	display: flex;
 }
 
@@ -74,7 +76,7 @@ input,
 
 .l_side_container {
 	width: 80%;
-	padding:  4rem;
+	padding: 2rem 4rem;
 	margin: 0 auto;
 	border: 2px solid var(--brand);
 	border-radius: 4px;
@@ -121,6 +123,7 @@ input,
 .formGroup label {
 	font-size: 0.875rem;
 	font-weight: var(--fontMedium);
+	text-align: left;
 }
 
 .formGroup input {
@@ -135,11 +138,13 @@ input,
 	outline: none;
 }
 
-.formGroup input:valid {
+.formGroup input:valid,
+.password input:valid {
 	border: 1px solid var(--brand);
 }
 
-.formGroup input:invalid {
+.formGroup input:invalid[focused="true"],
+.password input:invalid[focused="true"] {
 	border: 1px solid red;
 }
 
@@ -147,12 +152,12 @@ input,
 	color: red;
 	font-size: 0.875rem;
 	font-weight: var(--fontMedium);
-	visibility: hidden;
+	display: none;
 	text-align: left;
 }
 
-.formGroup input:invalid + .formGroup_errormsg {
-	visibility: visible;
+input:invalid[focused="true"] ~ .formGroup_errormsg {
+	display: block;
 }
 
 .password {
@@ -199,9 +204,44 @@ input,
 
 .signInRedir a {
 	color: var(--brand);
-    transition: border-bottom 0.2s;
+	transition: border-bottom 0.2s;
 }
 
 .signInRedir a:hover {
 	border-bottom: 3px solid var(--brand);
+}
+
+@media (max-width: 500px) {
+	.sign_up_wrapper {
+		height: 100%;
+	}
+
+	.r_side {
+		display: none;
+	}
+
+	.l_side {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.l_side_container {
+		width: 100%;
+		padding: 2rem 1rem;
+	}
+}
+
+@media (min-width: 650px) {
+	.sign_up_wrapper {
+		height: 100%;
+	}
+
+	.r_side {
+		display: none;
+	}
+
+	.l_side {
+		width: 85%;
+		margin: 0 auto;
+	}
 }
