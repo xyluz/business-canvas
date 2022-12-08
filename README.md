@@ -1,6 +1,6 @@
 <div align="center">
   <h1>TEMIBMC</h1>
-  <p>An app to helps you craft your business plans or address planning gaps in a current business. </p>
+  <p>An app that helps craft business plans or address planning gaps in a current business. </p>
 
   <p  align="center">
     <a href="https://bmc-vpc.netlify.app/">View Website</a>
