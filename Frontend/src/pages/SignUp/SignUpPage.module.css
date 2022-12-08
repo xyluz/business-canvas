@@ -148,12 +148,16 @@ input,
 	border: 1px solid red;
 }
 
-.formGroup_errormsg {
+.formGroup_errormsg, .password_errormsg {
 	color: red;
 	font-size: 0.875rem;
 	font-weight: var(--fontMedium);
 	display: none;
 	text-align: left;
+}
+
+.password_errormsg {
+	display: block;
 }
 
 input:invalid[focused="true"] ~ .formGroup_errormsg {
@@ -231,7 +235,7 @@ input:invalid[focused="true"] ~ .formGroup_errormsg {
 	}
 }
 
-@media (min-width: 650px) {
+@media (min-width: 650px) and (max-width: 800px) {
 	.sign_up_wrapper {
 		height: 100%;
 	}

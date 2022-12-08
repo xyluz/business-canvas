@@ -23,7 +23,7 @@ const SignUpPage = () => {
 	const [focused, setFocused] = React.useState(false);
 
 	const onChange = (e) => {
-		setValues({ ...values, [e.target.name]: e.target.value });
+		setValues({ ...values, [e.target.name]: e.target.value});
 	};
 
 	const errorMsg = [
@@ -42,8 +42,8 @@ const SignUpPage = () => {
 		e.preventDefault();
 	};
 
-	const handleFocus = (e) => {
-		setFocused(true);
+	const handleFocus = () => {
+		setFocused(prevState => !prevState);
 	};
 
 	return (
@@ -108,12 +108,15 @@ const SignUpPage = () => {
 										id="password"
 										onChange={onChange}
 										required
+										pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.])[A-Za-z\d@$!%*#?&.]{8,}$"
 										onBlur={handleFocus}
 										focused={focused.toString()}
 									/>
 									<img onClick={togglePwd} src={showPassword ? eye : closedEye} alt="password reveal" />
 								</div>
-								<p className={SignUpStyle.formGroup_errormsg}>{errorMsg[2].password}</p>
+								{values.password.length < 8 && focused && (
+									<p className={SignUpStyle.password_errormsg}>{errorMsg[2].password}</p>
+								)}
 							</div>
 							<div className={`${SignUpStyle.flex_col} ${SignUpStyle.formGroup}`}>
 								<label htmlFor="confirmPwd">Confirm your password</label>
