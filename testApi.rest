@@ -15,3 +15,13 @@ Content-Type: application/json
 	"email": "abiodunshittu@gmail.com",
 	"password": "abiodunshittu"
 }
+
+###
+PUT http://localhost:3000/api/users/change_password/639807d4f0f9e088a7d1f282
+Content-Type: application/json
+
+{
+    "oldPassword": "abiodunshittu",
+	"newPassword": "newPassword",
+	"confirmPassword": "newPassword"
+}
