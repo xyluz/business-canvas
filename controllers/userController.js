@@ -57,3 +57,32 @@ exports.loginUser = async (req, res) => {
 			.json({ message: "An error occurred, please contact Admin" });
 	}
 };
+
+exports.changePassword = async (req, res) => {
+	try {
+		const { oldPassword, newPassword, confirmPassword } = req.body;
+		const { id } = req.params;
+		const findUser = await User.findById(id);
+		if (!findUser) {
+			return res.status(404).json({ message: "User Not Found" });
+		}
+		const passMatch = await bcrypt.compare(oldPassword, findUser.password);
+		if (!passMatch) {
+			return res.status(404).json({ message: "Invalid Old Password" });
+		}
+		if (newPassword !== confirmPassword) {
+			return res.status(400).json({ message: "Passwords do not match" });
+		}
+		const hashedPassword = await bcrypt.hash(newPassword, 10);
+		findUser.password = hashedPassword;
+		await findUser.save();
+		return res
+			.status(200)
+			.json({ message: "Password Changed Successfully" });
+	} catch (err) {
+		console.log(err);
+		return res
+			.status(500)
+			.json({ message: "An error occurred, please contact Admin" });
+	}
+};
